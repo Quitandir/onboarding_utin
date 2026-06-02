@@ -1,0 +1,110 @@
+"use client";
+
+import { BanknoteArrowDown, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
+import { GoogleChromeLogoIcon } from "@phosphor-icons/react";
+import React from 'react';
+
+export interface CardItem {
+    id: number;
+    title: string;
+    icon: React.ReactNode;
+    description: string;
+    buttontext: string;
+    bgColorClass: string;
+    btnColorClass: string;
+    link: string;
+    support: string;
+}
+
+export const cardsData: CardItem[] = [
+    {
+        id: 8,
+        title: "Primeiro acesso ao email institucional",
+        description: "Tutorial desenvolvido pela UTIN para guiar seu primeiro acesso ao seu email institucional.",
+        icon: <DoorClosedLocked color="#111111" className="w-20 h-20" />,
+        buttontext: "Primeiro acesso",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "./primeiro_acesso",
+        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+    },
+    {
+        id: 6,
+        title: "Email Institucional no celular",
+        description: "Tutorial da UTIN de como configurar sua conta institucional no seu smartphone",
+        icon: <MailQuestionMark color="#111111" className="w-20 h-20" />,
+        buttontext: "Site da UTIN",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://tutorial-canoasedu-smartphone.web.app/",
+        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+    },
+    {
+        id: 5,
+        title: "Unidade de Tecnologia e Inovação",
+        description: "Informações dos projetos e recursos da UTIN - Time Google",
+        icon: <GoogleChromeLogoIcon size={32} color="#111111" className="w-20 h-20" />,
+        buttontext: "Site da UTIN",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://sites.google.com/canoasedu.rs.gov.br/tecnologia/in%C3%ADcio",
+        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+    },
+    {
+        id: 1,
+        title: "RH",
+        description: "Dúvidas referentes ao seu contracheque, informes de recebimentos, declaração de bens.",
+        icon: <BanknoteArrowDown color="#111111" className="w-20 h-20" />,
+        buttontext: "Site do RH 24 horas",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://portaldoservidor.canoas.rs.gov.br/servico-rh-24-horas/",
+        support: ""
+    },
+    {
+        id: 2,
+        title: "Chamadas e Diários de Classe",
+        description: "I-Diário é a plataforma que os profes usam para registrar notas, presenças e registros de aula.",
+        icon: <NotebookPen color="#111111" className="w-20 h-20" />,
+        buttontext: "Site do I-Diário",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://idiario.canoas.rs.gov.br/usuarios/logar",
+        support: "Suporte: Secretário de sua escola"
+    },
+    {
+        id: 3,
+        title: "Memorandos",
+        description: "Plataforma de comunicação oficial dos servidores do Município de Canoas.",
+        icon: <StickyNoteCheck color="#111111" className="w-20 h-20" />,
+        buttontext: "Site dos Memorandos",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://sistemas.canoas.rs.gov.br/memorandos/entrar",
+        support: ""
+    },
+    {
+        id: 4,
+        title: "Conveniados do CanoasPrev",
+        description: "Onde encontrar serviços de saúde conveniados pelo plano do município.",
+        icon: <HeartPulse color="#111111" className="w-20 h-20" />,
+        buttontext: "Site do CanoasPrev",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://facgeocanoasprev.facilinformatica.com.br/",
+        support: "Suporte: Canoasprev - (51) 3462.8800"
+    },
+
+    {
+        id: 7,
+        title: "Troca de senha",
+        description: "Para trocar sua senha de serviços da prefeitura, entre em contato com o CanoasTec, solicite sua troca de senha e depois acesse o site do link abaixo para realizar sua atualização.",
+        icon: <KeyRound color="#111111" className="w-20 h-20" />,
+        buttontext: "Troca de senha",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://sistemas.canoas.rs.gov.br/servicos#/troca-senha",
+        support: "Suporte: Canoastec - (51) 3236-1700"
+    },
+
+]
