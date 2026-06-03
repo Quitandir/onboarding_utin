@@ -1,6 +1,6 @@
 "use client";
 
-import { BanknoteArrowDown, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
+import { BanknoteArrowDown, BookUser, Computer, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
 import { GoogleChromeLogoIcon } from "@phosphor-icons/react";
 import React from 'react';
 
@@ -18,7 +18,18 @@ export interface CardItem {
 
 export const cardsData: CardItem[] = [
     {
-        id: 8,
+        id: 10,
+        title: "Requisição de e-mail institucional",
+        description: "Instruções de como solicitar a criação da sua conta institucional",
+        icon: <BookUser color="#111111" className="w-20 h-20" />,
+        buttontext: "Primeiro acesso",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "",
+        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+    },
+    {
+        id: 9,
         title: "Primeiro acesso ao email institucional",
         description: "Tutorial desenvolvido pela UTIN para guiar seu primeiro acesso ao seu email institucional.",
         icon: <DoorClosedLocked color="#111111" className="w-20 h-20" />,
@@ -106,5 +117,17 @@ export const cardsData: CardItem[] = [
         link: "https://sistemas.canoas.rs.gov.br/servicos#/troca-senha",
         support: "Suporte: Canoastec - (51) 3236-1700"
     },
+    {
+       id: 8,
+        title: "Incentivo financeiro para compra de notebook",
+        description: "Informações pertinentes sobre o subsídio docente para aquisição de dispositivos eletrônicos.",
+        icon: <Computer color="#111111" className="w-20 h-20" />,
+        buttontext: "Acesse o decreto",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://www.canoas.rs.gov.br/wp-content/uploads/2022/02/Decreto-31-Altera-Dec-117-2014-_2021061514_.pdf",
+        support: "Direção da sua escola" 
+    },
+    
 
 ]
