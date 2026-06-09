@@ -2,7 +2,7 @@ export default function Footer() {
     return (
         <footer className="w-full bg-emerald-50 border-t border-gray-200 mt-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-2 py-8">
-                <div className="flex flex-col justify-end items-center gap-6 md:flex-row md:justify-between md:gap-0">
+                <div className="flex flex-col justify-end items-bottom gap-6 md:flex-row md:justify-between md:gap-0">
                     <div className="flex flex-col gap-2">
                         <div className="flex items-center gap-6 ">  
                             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-phone-call-icon lucide-phone-call"><path d="M13 2a9 9 0 0 1 9 9" /><path d="M13 6a5 5 0 0 1 5 5" /><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" /></svg>

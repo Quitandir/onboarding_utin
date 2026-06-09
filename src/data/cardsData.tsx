@@ -17,17 +17,7 @@ export interface CardItem {
 }
 
 export const cardsData: CardItem[] = [
-    {
-        id: 10,
-        title: "Requisição de e-mail institucional",
-        description: "Instruções de como solicitar a criação da sua conta institucional",
-        icon: <BookUser color="#111111" className="w-20 h-20" />,
-        buttontext: "Primeiro acesso",
-        bgColorClass: "bg-blue-50 border-blue-200",
-        btnColorClass: "bg-blue-600 hover:bg-blue-700",
-        link: "",
-        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
-    },
+    
     {
         id: 9,
         title: "Primeiro acesso ao email institucional",
@@ -126,7 +116,7 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://www.canoas.rs.gov.br/wp-content/uploads/2022/02/Decreto-31-Altera-Dec-117-2014-_2021061514_.pdf",
-        support: "Direção da sua escola" 
+        support: "Suporte: Direção da sua escola" 
     },
     
 

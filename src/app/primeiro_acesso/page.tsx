@@ -33,11 +33,25 @@ export default function Page() {
                     </h2>
                     <Image src='/envelope.png' alt='envelope colorido' width={200} height={200} loading="eager" className='object-contain mb-10' />
                     <span className="text-2xl sm:text-2xl tracking-tight mb-4 font-love text-red-900">
-                        Cordialmente desenvolvido pela utin/sme - time google
+                        Cordialmente desenvolvido pela UTIN/SME - time google
                     </span>
                 </section>
-                <section className="flex flex-col items-center border-b-1 border-indigo-900">
+                <section className="flex flex-col items-top border-b-1 border-indigo-900 gap-10 md:flex-row">
+                    <span className="font-madi text-4xl sm:text-6xl tracking-tight mb-4 text-indigo-900">
+                        Novo na rede?
+                    </span>
                     <p className="text-3xl sm:text-4xl tracking-tight mb-4 font-love text-indigo-900 leading-relaxed">
+                        Você receberá em seu e-mail pessoal uma mensagem do Canoastec informando seu login 
+                        e senha para sua conta institucional @canoasedu. 
+                    </p>
+                    <p className="text-3xl sm:text-4xl tracking-tight mb-4 font-love text-indigo-900 leading-relaxed"   >
+                        No seu primeiro acesso, você conseguirá acessar somente com a senha disponibilizada, mas depois você precisará 
+                        ter ativado a verificação em duas etapas para acessar de sua conta de novos dispositivos.
+                    </p>
+
+                </section>
+                <section className="flex flex-col items-center border-b-1 border-indigo-900">
+                    <p className="text-2xl sm:text-3xl tracking-tight mb-4 font-love text-indigo-900 leading-relaxed">
                         A verificação em duas etapas funciona como uma segunda chave de segurança. Mesmo que alguém saiba a sua senha, não consegue entrar na sua conta sem essa segunda chave. Então, sempre que você entrar em um aparelho novo, além da senha, o sistema vai pedir esse código extra (que chega no celular ou no e-mail).
                     </p>
                     <div className="flex gap-10 mb-10">
