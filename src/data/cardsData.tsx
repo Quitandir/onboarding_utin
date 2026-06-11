@@ -1,6 +1,6 @@
 "use client";
 
-import { BanknoteArrowDown, BookUser, Computer, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
+import { BadgeQuestionMark, BanknoteArrowDown, BookUser, Computer, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
 import { GoogleChromeLogoIcon } from "@phosphor-icons/react";
 import React from 'react';
 
@@ -17,7 +17,7 @@ export interface CardItem {
 }
 
 export const cardsData: CardItem[] = [
-    
+
     {
         id: 9,
         title: "Primeiro acesso ao email institucional",
@@ -34,7 +34,7 @@ export const cardsData: CardItem[] = [
         title: "Email Institucional no celular",
         description: "Tutorial da UTIN de como configurar sua conta institucional no seu smartphone",
         icon: <MailQuestionMark color="#111111" className="w-20 h-20" />,
-        buttontext: "Site da UTIN",
+        buttontext: "Tutorial da UTIN",
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://tutorial-canoasedu-smartphone.web.app/",
@@ -43,7 +43,7 @@ export const cardsData: CardItem[] = [
     {
         id: 5,
         title: "Unidade de Tecnologia e Inovação",
-        description: "Informações dos projetos e recursos da UTIN - Time Google",
+        description: "Informações dos projetos e recursos geridos pela UTIN - Time Google",
         icon: <GoogleChromeLogoIcon size={32} color="#111111" className="w-20 h-20" />,
         buttontext: "Site da UTIN",
         bgColorClass: "bg-blue-50 border-blue-200",
@@ -54,7 +54,7 @@ export const cardsData: CardItem[] = [
     {
         id: 1,
         title: "RH",
-        description: "Dúvidas referentes ao seu contracheque, informes de recebimentos, declaração de bens.",
+        description: "Informações referentes ao seu contracheque, informes de recebimentos, declaração de bens.",
         icon: <BanknoteArrowDown color="#111111" className="w-20 h-20" />,
         buttontext: "Site do RH 24 horas",
         bgColorClass: "bg-blue-50 border-blue-200",
@@ -98,8 +98,8 @@ export const cardsData: CardItem[] = [
 
     {
         id: 7,
-        title: "Troca de senha",
-        description: "Para trocar sua senha de serviços da prefeitura, entre em contato com o CanoasTec, solicite sua troca de senha e depois acesse o site do link abaixo para realizar sua atualização.",
+        title: "Senhas institucionais",
+        description: "As suas senhas funcionais para as diferentes plataformas que você vai usar são geridas pelo Canoastec. Quando precisar redefinir uma nova senha para o Portal do Servidor, contate o Canoastec e depois acesse o botão abaixo.",
         icon: <KeyRound color="#111111" className="w-20 h-20" />,
         buttontext: "Troca de senha",
         bgColorClass: "bg-blue-50 border-blue-200",
@@ -108,7 +108,7 @@ export const cardsData: CardItem[] = [
         support: "Suporte: Canoastec - (51) 3236-1700"
     },
     {
-       id: 8,
+        id: 8,
         title: "Incentivo financeiro para compra de notebook",
         description: "Informações pertinentes sobre o subsídio docente para aquisição de dispositivos eletrônicos.",
         icon: <Computer color="#111111" className="w-20 h-20" />,
@@ -116,8 +116,19 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://www.canoas.rs.gov.br/wp-content/uploads/2022/02/Decreto-31-Altera-Dec-117-2014-_2021061514_.pdf",
-        support: "Suporte: Direção da sua escola" 
+        support: "Suporte: Direção da sua escola"
     },
-    
+    {
+        id: 10,
+        title: "Outras dúvidas",
+        description: "Se você tiver qualquer outra dúvida pertinente ao sua vida docente e funcional, preencha esse formulário que nós vamos te orientar.",
+        icon: <BadgeQuestionMark color="#111111" className="w-20 h-20" />,
+        buttontext: "Formulário de dúvidas",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://docs.google.com/forms/d/e/1FAIpQLSdRmzhaolYngg63HqH9B2ERah3SwhCA53Bl8gT9me3YaNBh1g/viewform?usp=publish-editor",
+        support: ""
+    },
+
 
 ]
