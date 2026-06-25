@@ -35,6 +35,8 @@ export default function Home() {
               btnColorClass={card.btnColorClass}
               link={card.link}
               support={card.support}
+              secondaryButtonText={card.secondaryButtonText}
+              secondaryLink={card.secondaryLink}
             />
           ))}
         </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { BadgeQuestionMark, BanknoteArrowDown, BookUser, Computer, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, StickyNoteCheck } from 'lucide-react';
+import { BadgeQuestionMark, BanknoteArrowDown, BookUser, ChartNoAxesCombined, Computer, DoorClosedLocked, HeartPulse, KeyRound, MailQuestionMark, NotebookPen, Scale, StickyNoteCheck } from 'lucide-react';
 import { GoogleChromeLogoIcon } from "@phosphor-icons/react";
 import React from 'react';
 
@@ -14,6 +14,8 @@ export interface CardItem {
     btnColorClass: string;
     link: string;
     support: string;
+    secondaryButtonText?: string;
+    secondaryLink?: string;
 }
 
 export const cardsData: CardItem[] = [
@@ -27,7 +29,7 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "./primeiro_acesso",
-        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+        support: "Suporte: UTIN - 34257701 - R:5345 | time.google@canoasedu.rs.gov.br"
     },
     {
         id: 6,
@@ -38,7 +40,7 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://tutorial-canoasedu-smartphone.web.app/",
-        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+        support: "Suporte: UTIN - 34257701 - R:5345 | time.google@canoasedu.rs.gov.br"
     },
     {
         id: 5,
@@ -49,7 +51,7 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://sites.google.com/canoasedu.rs.gov.br/tecnologia/in%C3%ADcio",
-        support: "Suporte: UTIN - 34257701 | time.google@canoasedu.rs.gov.br"
+        support: "Suporte: UTIN - 34257701 - R:5345 | time.google@canoasedu.rs.gov.br"
     },
     {
         id: 1,
@@ -119,7 +121,31 @@ export const cardsData: CardItem[] = [
         support: "Suporte: Direção da sua escola"
     },
     {
+        id: 12,
+        title: "Estatuto do Servidor Público de Canoas",
+        description: "Esta Lei institui o regime jurídico dos servidores públicos municipais do Poder Legislativo e dos órgãos da administração direta e autárquica do Poder Executivo, de natureza estatutária e de direito público.",
+        icon: <Scale color="#111111" className="w-20 h-20" />,
+        buttontext: "Acesse o estatuto",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://leismunicipais.com.br/estatuto-do-servidor-funcionario-publico-canoas-rs",
+        support: ""
+    },
+    {
         id: 10,
+        title: "Progressões da lei 5878/2014",
+        description: "Informações úteis sobre as progressões de classe e grau para servidores enquadrados na lei 5878/2014.",
+        icon: <ChartNoAxesCombined color="#111111" className="w-20 h-20" />,
+        buttontext: "Mudança de Grau",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://drive.google.com/file/d/1G9ftRPjL3CLYL-JWOT_dQ3T-pMgstxOS/view?usp=sharing",
+        support: "Suporte: nucleo.gestao@canoasedu.rs.gov.br",
+        secondaryButtonText: "Mudança de Classe",
+        secondaryLink: "https://drive.google.com/file/d/1hkMxp-x-Y3lKtNUsAzDWutrNZ5URqH9l/view?usp=sharing"
+    },
+    {
+        id: 11,
         title: "Outras dúvidas",
         description: "Se você tiver qualquer outra dúvida pertinente ao sua vida docente e funcional, preencha esse formulário que nós vamos te orientar.",
         icon: <BadgeQuestionMark color="#111111" className="w-20 h-20" />,

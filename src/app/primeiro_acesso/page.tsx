@@ -1,28 +1,21 @@
 import { CircleArrowRight, KeyRound } from "lucide-react";
 import Image from "next/image";
+import utin_logo from '../../../public/canoeiro_utin.png';
 
 /*
-const background_logo = {
-    background-color: var(--bg-color);
-    background-image: url(https://drive.google.com/thumbnail?id=149bDidWbPZg6MO8AujH9RZVcWF546OlH&sz=w1500);
-    background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: left;
-}
-*/
-
-export default function Page() {
-    return (
-        <div className="flex flex-col flex-1 items-center justify-center bg-emerald-100 
-            bg-[url('https://drive.google.com/thumbnail?id=149bDidWbPZg6MO8AujH9RZVcWF546OlH&sz=w1500')] 
+bg-[url('https://drive.google.com/thumbnail?id=149bDidWbPZg6MO8AujH9RZVcWF546OlH&sz=w1500')] 
             bg-no-repeat 
             bg-left 
             bg-blend-multiply
             bg-fixed 
             overflow-y-auto"
-        >
+*/
+
+export default function Page() {
+    return (
+        <div className="flex flex-col flex-1 items-center justify-center bg-emerald-100">
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex flex-col gap-10">
-                <section className="flex flex-col items-center border-b border-indigo-900">
+                <section className="flex flex-col items-center border-b border-indigo-900 ">
                     <h1 className="text-3xl sm:text-4xl tracking-tight mb-4 font-love text-indigo-900 drop-shadow">
                         Primeiro acesso ao e-mail institucional
                     </h1>
@@ -34,16 +27,16 @@ export default function Page() {
                         Cordialmente desenvolvido pela UTIN/SME - Time Google
                     </span>
                 </section>
-                <section className="flex flex-col items-start border-b border-indigo-900 gap-10 md:flex-row ">
+                <section className="flex flex-col items-start border-b border-indigo-900 gap-10 md:flex-row  ">
                     <span className="font-madi text-4xl sm:text-6xl tracking-tight mb-4 text-indigo-900">
                         Novo na rede?
                     </span>
                     <p className="text-lg sm:text-4xl tracking-tight mb-4 font-love text-indigo-900 leading-relaxed">
-                        Você receberá em seu e-mail pessoal uma mensagem do Canoastec informando seu login 
-                        e senha para sua conta institucional @canoasedu. 
+                        Você receberá em seu e-mail pessoal uma mensagem do Canoastec informando seu login
+                        e senha para sua conta institucional @canoasedu.
                     </p>
                     <p className="text-lg sm:text-4xl tracking-tight mb-4 font-love text-indigo-900 leading-relaxed"   >
-                        No seu primeiro acesso, você conseguirá acessar somente com a senha disponibilizada, mas depois você precisará 
+                        No seu primeiro acesso, você conseguirá acessar somente com a senha disponibilizada, mas depois você precisará
                         ter ativado a verificação em duas etapas para acessar de sua conta de novos dispositivos.
                     </p>
 
@@ -146,9 +139,12 @@ export default function Page() {
 
                 </section>
                 <section className="flex flex-col md:flex-row gap-8 items-start bg-indigo-950 text-white p-8 rounded-3xl shadow-xl">
-                    <h3 className="font-madi text-5xl sm:text-7xl text-amber-400 shrink-0 md:w-1/3">
-                        Nada ainda?
-                    </h3>
+                    <div className="flex flex-col items-center">
+                        <h3 className="font-madi text-5xl sm:text-7xl text-amber-400 shrink-0 md:w-1/3">
+                            Nada ainda?
+                        </h3>
+                        <Image src={utin_logo} alt='logo da UTIN' width={100} />
+                    </div>
                     <div className="flex flex-col gap-4 md:w-2/3">
                         <h4 className="text-xl sm:text-2xl font-bold font-love text-amber-200">
                             Não está recebendo um código de verificação?

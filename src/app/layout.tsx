@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Love_Ya_Like_A_Sister, Ms_Madi } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${lylas.variable} ${madi.variable} h-full antialiased`}
     >
+      <GoogleAnalytics gaId="G-2SJF7EQSS3" />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
