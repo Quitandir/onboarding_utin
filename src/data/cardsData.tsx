@@ -118,7 +118,9 @@ export const cardsData: CardItem[] = [
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
         link: "https://www.canoas.rs.gov.br/wp-content/uploads/2022/02/Decreto-31-Altera-Dec-117-2014-_2021061514_.pdf",
-        support: "Suporte: Direção da sua escola"
+        support: "Suporte: Enviar memorando para RODRIGO MACHADO NUNES",
+        secondaryButtonText: "Memorando informativo",
+        secondaryLink: "https://drive.google.com/file/d/16UWFZaIczjnZ5q3oUgojwUDK9S7QUdAQ/view?usp=sharing"
     },
     {
         id: 10,
