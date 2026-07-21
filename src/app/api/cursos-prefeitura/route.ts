@@ -52,8 +52,8 @@ export async function GET(request: Request) {
       let minutosCurso = 0;
       let temTempo = false;
 
-      colunas.each((_, td) => {
-        const texto = $(td).text().trim();
+      for (let i = 0; i < colunas.length; i++) {
+        const texto = $(colunas[i]).text().trim();
 
         // Identifica e captura a data do curso
         const matchData = texto.match(regexData);
@@ -71,9 +71,9 @@ export async function GET(request: Request) {
           minutosCurso = parseInt(matchTempo[2], 10);
           temTempo = true;
         }
-      });
+      }
 
-      // Aplica o filtro de data se encontrar ambos os dados na linha
+      // Agora o TypeScript sabe com 100% de certeza que dataCurso é do tipo 'Date' aqui dentro!
       if (dataCurso && temTempo) {
         if (dataCurso.getTime() >= dataInicioCiclo.getTime()) {
           totalHorasOficiais += horasCurso + (minutosCurso / 60);
