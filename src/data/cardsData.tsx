@@ -34,12 +34,12 @@ export const cardsData: CardItem[] = [
     {
         id: 2,
         title: "Email Institucional no celular",
-        description: "Tutorial da UTIN de como configurar sua conta institucional no seu smartphone",
+        description: "Tutorial da UTIN de como configurar sua conta institucional @canoasedu no seu smartphone",
         icon: <MailQuestionMark color="#111111" className="w-20 h-20" />,
         buttontext: "Tutorial da UTIN",
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
-        link: "https://tutorial-canoasedu-smartphone.web.app/",
+        link: "/tutorial_smartphone",
         support: "Suporte: UTIN - 34257701 - R:5345 | time.google@canoasedu.rs.gov.br"
     },
     {
