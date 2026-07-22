@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCalculadora } from "../context";
+import Link from "next/link";
 
 export default function ResultadoCalculadora() {
   const router = useRouter();
@@ -108,7 +109,7 @@ export default function ResultadoCalculadora() {
             <div>
               <p className="text-xs text-slate-500">Início do Ciclo</p>
               <p className="text-base font-bold text-slate-800">
-                {formData.dataInicio ? new Date(formData.dataInicio).toLocaleDateString("pt-BR") : "—"}
+                {formData.dataInicio ? new Date(formData.dataInicio).toLocaleDateString("pt-BR", { timeZone: "UTC" }) : "—"}
               </p>
             </div>
             <div className="text-slate-300">➡️</div>
@@ -155,8 +156,11 @@ export default function ResultadoCalculadora() {
           <span className="text-xs text-slate-400 uppercase font-bold tracking-widest block">Soma Estimada Total</span>
           <span className="text-4xl font-black text-slate-900 mt-1 block">{pontuacaoTotalGeral.toFixed(2)} Pontos</span>
 
-          <p className="text-xs text-slate-500 max-w-md mx-auto mt-4 leading-relaxed">
-            Consulte a tabela de transição de carreira de Canoas para verificar em qual classe salarial este acúmulo de pontos lhe posicionará no próximo ciclo!
+          <p className="text-s text-slate-500 mx-auto mt-4 leading-relaxed">
+            Você precisa de 1.000 pontos pelo critério de "qualificação profissonal" e mais 1500 por "titulação por grau agregado" para requerer a mudança de grau. Você pode encontrar mais detalhes no 
+             <Link href="https://drive.google.com/file/d/1G9ftRPjL3CLYL-JWOT_dQ3T-pMgstxOS/view?usp=sharing" className="text-blue-500">
+               &nbsp;seguinte documento.            
+            </Link>
           </p>
         </div>
 

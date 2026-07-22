@@ -3,16 +3,8 @@
 import React, { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useCalculadora } from "../context"; // 1. O import fica aqui em cima
+import { log } from "console";
 
-interface CursoExterno {
-  id: string;
-  data: string;
-  nome: string;
-  horas: number;
-  isGratuito: boolean;
-}
-
-// Interface para a estrutura de cada curso inserido
 interface CursoExterno {
   id: string;
   data: string;
@@ -100,6 +92,8 @@ export default function Passo2() {
     router.push("/calculadora/resultado");
   };
 
+  console.log(formData.dataInicio);
+
   return (
     <main className="max-w-5xl mx-auto p-4 md:p-8">
       {/* Resumo simples dos dados vindos do Passo 1 */}
@@ -109,7 +103,7 @@ export default function Passo2() {
         </div>
         <div>
           <strong>Início do Ciclo:</strong>{" "}
-          {formData.dataInicio ? new Date(formData.dataInicio).toLocaleDateString("pt-BR") : "Não informado"}
+          {formData.dataInicio ? new Date(formData.dataInicio).toLocaleDateString("pt-BR", { timeZone: "UTC" }) : "Não informado"}
         </div>
         <div>
           <strong>Faltas/Licenças:</strong> {formData.faltasLicencias} dias

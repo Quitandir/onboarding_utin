@@ -146,14 +146,14 @@ export const cardsData: CardItem[] = [
     {
         id: 12,
         title: "Progressões da lei 5878/2014",
-        description: "Informações úteis sobre as progressões de classe e grau para servidores enquadrados na lei 5878/2014.",
+        description: "Informações úteis sobre as progressões de classe para servidores enquadrados na lei 5878/2014 e uma calculadora para simular sua pontuação para progressão de grau.",
         icon: <ChartNoAxesCombined color="#111111" className="w-20 h-20" />,
-        buttontext: "Mudança de Grau",
+        buttontext: "Calculadora para mudança de Grau",
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
-        link: "https://drive.google.com/file/d/1G9ftRPjL3CLYL-JWOT_dQ3T-pMgstxOS/view?usp=sharing",
+        link: "/calculadora",
         support: "Suporte: nucleo.gestao@canoasedu.rs.gov.br",
-        secondaryButtonText: "Mudança de Classe",
+        secondaryButtonText: "Informações sobre mudança de Classe",
         secondaryLink: "https://drive.google.com/file/d/1hkMxp-x-Y3lKtNUsAzDWutrNZ5URqH9l/view?usp=sharing"
     },
     {

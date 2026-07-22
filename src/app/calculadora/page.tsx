@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useCalculadora } from "./context";
+import { Tooltip } from "@/components/Tooltip";
 
 export default function Passo1() {
   const router = useRouter();
@@ -54,7 +55,7 @@ export default function Passo1() {
           Dados da sua Progressão
         </h1>
         <p className="text-slate-600 mb-8 text-sm leading-relaxed">
-          Preencha os dados abaixo para iniciar a simulação do seu ciclo avaliativo de cinco anos.
+          Preencha os dados abaixo para iniciar a simulação da sua pontuação de <strong>qualificação profissional</strong>.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -76,9 +77,11 @@ export default function Passo1() {
 
           {/* Campo Data de Início */}
           <div>
-            <label htmlFor="data-inicio" className="block text-sm font-semibold text-slate-700 mb-2">
-              Data de Início do Ciclo
-            </label>
+            <Tooltip position="right" content="A data que você ingressou no município ou a data que marca o início do novo ciclo de cinco anos.">
+              <label htmlFor="data-inicio" className="block text-sm font-semibold text-slate-700 mb-2">
+                Data de Início do Ciclo ℹ️
+              </label>
+            </Tooltip>
             <input
               type="date"
               id="data-inicio"
@@ -98,7 +101,7 @@ export default function Passo1() {
               type="number"
               id="faltas"
               min="0"
-              required
+              //required
               placeholder="Ex: 12"
               value={faltasLicencias || ""}
               onChange={(e) => setFaltasLicencias(Number(e.target.value))}
