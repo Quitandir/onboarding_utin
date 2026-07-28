@@ -63,10 +63,12 @@ export default function ResultadoCalculadora() {
         setCursosValidos(dados.cursosValidos || 0);
         setCursosIgnorados(dados.cursosIgnorados || 0);
 
+        if(dados.cpfRegistrado == false) setErroSME("Não foi encontrado nenhuma pessoa com esse CPF");   
+
       } catch (err) {
         console.error("Erro ao chamar API local:", err);
-        setErroSME("Não foi possível acessar os dados em tempo real. Usando estimativa.");
-        setHorasSME(40); // Fallback seguro
+        setErroSME("Não foi possível acessar os dados em tempo real.");
+        setHorasSME(0); // Fallback seguro
       } finally {
         setLoading(false);
       }

@@ -11,6 +11,7 @@ export default function Passo1() {
 
   // Estados locais iniciados com o que já estiver no contexto (caso o usuário decida voltar para corrigir)
   const [cpf, setCpf] = useState(formData.cpf);
+  const [erroCpf, setErroCpf] = useState("");
   const [dataInicio, setDataInicio] = useState(formData.dataInicio);
   const [faltasLicencias, setFaltasLicencias] = useState(formData.faltasLicencias);
 
@@ -37,8 +38,12 @@ export default function Passo1() {
       faltasLicencias: Number(faltasLicencias),
     });
 
-    // Navega suavemente para a próxima etapa
-    router.push("/calculadora/passo-2");
+    if (cpf.length < 11) {
+      setErroCpf("O CPF precisa ter 11 dígitos.")
+    } else {
+      // Navega suavemente para a próxima etapa
+      router.push("/calculadora/passo-2");
+    }
   };
 
   return (
@@ -74,6 +79,9 @@ export default function Passo1() {
               className="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-slate-800"
             />
           </div>
+          {erroCpf && (
+            <p className="text-xs text-red-600 mt-1 font-medium">{erroCpf}</p>
+          )}
 
           {/* Campo Data de Início */}
           <div>

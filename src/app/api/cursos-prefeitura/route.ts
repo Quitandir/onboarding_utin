@@ -34,6 +34,13 @@ export async function GET(request: Request) {
     let totalHorasOficiais = 0;
     let cursosValidos = 0;
     let cursosIgnorados = 0;
+    let cpfRegistrado = true;
+
+    const textoPagina = $('body').text();
+
+    if(textoPagina.includes("Não foi encontrado pessoa com o CPF")) {
+      cpfRegistrado = false
+    }
 
     // Converter a data de início do ciclo (vinda do input no formato "YYYY-MM-DD")
     const [startYear, startMonth, startDay] = dataInicio.split("-").map(Number);
@@ -85,16 +92,19 @@ export async function GET(request: Request) {
     });
 
     // Fallback de contingência caso a página retorne totalmente sem cursos
+    /*
     if (totalHorasOficiais === 0 && cursosValidos === 0 && cursosIgnorados === 0) {
       totalHorasOficiais = 80; 
     }
+    */
 
     // Retorna a resposta prontinha e mastigada para o front-end
     return NextResponse.json({
       totalHorasOficiais,
       cursosValidos,
       cursosIgnorados,
-      urlOrigem: urlPrefeitura
+      urlOrigem: urlPrefeitura,
+      cpfRegistrado
     });
 
   } catch (error: any) {
