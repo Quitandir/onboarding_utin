@@ -169,7 +169,7 @@ export default function ResultadoCalculadora() {
           <button
             type="button"
             onClick={() => router.push("/calculadora")}
-            className="flex-1 py-3 border border-slate-300 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 text-sm transition-colors"
+            className="flex-1 py-3 border border-slate-300 text-slate-700 font-semibold rounded-xl hover:bg-slate-100 text-sm transition-colors cursor-pointer"
           >
             Refazer Simulação
           </button>

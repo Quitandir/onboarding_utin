@@ -236,7 +236,7 @@ export default function Passo2() {
           <button
             type="button"
             onClick={() => router.back()}
-            className="px-6 py-2.5 border border-slate-300 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 text-sm transition-colors w-full md:w-auto"
+            className="px-6 py-2.5 border border-slate-300 text-slate-700 font-semibold rounded-xl hover:bg-slate-50 text-sm transition-colors w-full md:w-auto cursor-pointer"
           >
             Voltar
           </button>
@@ -250,7 +250,7 @@ export default function Passo2() {
             <button
               type="button"
               onClick={handleFinalizar}
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors w-full md:w-auto text-center"
+              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl text-sm transition-colors w-full md:w-auto text-center cursor-pointer"
             >
               Finalizar Simulação
             </button>
