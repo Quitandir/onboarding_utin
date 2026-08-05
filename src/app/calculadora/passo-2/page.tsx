@@ -4,6 +4,7 @@ import React, { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { useCalculadora } from "../context"; // 1. O import fica aqui em cima
 import { log } from "console";
+import { Tooltip } from "@/components/Tooltip";
 
 interface CursoExterno {
   id: string;
@@ -174,15 +175,17 @@ export default function Passo2() {
 
                 {/* Checkbox Gratuito */}
                 <div className="md:col-span-2 flex items-center h-10">
-                  <label className="flex items-center gap-2 cursor-pointer select-none">
-                    <input
-                      type="checkbox"
-                      checked={curso.isGratuito}
-                      onChange={(e) => atualizarCurso(curso.id, "isGratuito", e.target.checked)}
-                      className="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500 cursor-pointer"
-                    />
-                    <span className="text-xs font-semibold text-slate-600">Sem Custo</span>
-                  </label>
+                  <Tooltip position="right" content="Marque essa opção se esse curso não teve nenhum custo para a Administração.">
+                    <label className="flex items-center gap-2 cursor-pointer select-none">
+                      <input
+                        type="checkbox"
+                        checked={curso.isGratuito}
+                        onChange={(e) => atualizarCurso(curso.id, "isGratuito", e.target.checked)}
+                        className="w-4 h-4 text-blue-600 border-slate-300 rounded focus:ring-blue-500 cursor-pointer"
+                      />
+                      <span className="text-xs font-semibold text-slate-600">Sem Custo ℹ️</span>
+                    </label>
+                  </Tooltip>
                 </div>
 
                 {/* Pontuação Estimada Individual e Ações */}

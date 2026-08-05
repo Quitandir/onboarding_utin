@@ -159,7 +159,7 @@ export default function ResultadoCalculadora() {
           <span className="text-4xl font-black text-slate-900 mt-1 block">{pontuacaoTotalGeral.toFixed(2)} Pontos</span>
 
           <p className="text-s text-slate-500 mx-auto mt-4 leading-relaxed">
-            Você precisa de 1.000 pontos pelo critério de "qualificação profissonal" e mais 1500 por "titulação por grau agregado" para requerer a mudança de grau. Você pode encontrar mais detalhes no 
+            Você precisa de 1.000 pontos pelo critério de "qualificação profissonal" e mais 1000 por "titulação por grau agregado" para requerer a mudança de grau. Você pode encontrar mais detalhes no 
              <Link href="https://drive.google.com/file/d/1G9ftRPjL3CLYL-JWOT_dQ3T-pMgstxOS/view?usp=sharing" className="text-blue-500">
                &nbsp;seguinte documento.            
             </Link>
