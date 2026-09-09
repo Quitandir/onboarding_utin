@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Love_Ya_Like_A_Sister, Ms_Madi } from "next/font/google";
 import "./globals.css";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "@/lib/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,8 +25,25 @@ const madi = Ms_Madi({
 });
 
 export const metadata: Metadata = {
-  title: "Onboarding docente de Canoas",
-  description: "ONBOARDING DOS DOCENTES DA REDE DO MUNICÍPIO DE CANOAS",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s · ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  openGraph: {
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: SITE_NAME,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({
