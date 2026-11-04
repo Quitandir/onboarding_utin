@@ -1,6 +1,6 @@
 "use client";
 
-import { BadgeQuestionMark, BanknoteArrowDown, ChartNoAxesCombined, Computer, DoorClosedLocked, GraduationCap, HeartPulse, KeyRound, MailQuestionMark, Map, NotebookPen, Scale, StickyNoteCheck, BookCheck } from 'lucide-react';
+import { BadgeQuestionMark, BanknoteArrowDown, ChartNoAxesCombined, Computer, DoorClosedLocked, GraduationCap, HeartPulse, KeyRound, MailQuestionMark, Map, NotebookPen, Scale, StickyNoteCheck, BookCheck, AtSign } from 'lucide-react';
 import { GoogleChromeLogoIcon } from "@phosphor-icons/react";
 import React from 'react';
 
@@ -178,7 +178,18 @@ export const cardsData: CardItem[] = [
         link: "https://www.canoas.rs.gov.br/emissao-de-certificados/",
         support: ""
     },
-     {
+    {
+        id: 17,
+        title: "Política de uso do e-mail Institucional/Educacional e espaços vinculados",
+        description: "Informações sobre a política de uso das contas @canoasedu.",
+        icon: <AtSign  color="#111111" className="w-20 h-20" />,
+        buttontext: "Acesse o documento",
+        bgColorClass: "bg-blue-50 border-blue-200",
+        btnColorClass: "bg-blue-600 hover:bg-blue-700",
+        link: "https://www.canoas.rs.gov.br/emissao-de-certificados/",
+        support: ""
+    },
+    {
         id: 15,
         title: "Vitrine de Cursos",
         description: "Um repositório de plataformas com cursos gratuítos e certificados para o desenvolvimento da sua carreira.",
