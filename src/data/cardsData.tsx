@@ -186,7 +186,7 @@ export const cardsData: CardItem[] = [
         buttontext: "Acesse o documento",
         bgColorClass: "bg-blue-50 border-blue-200",
         btnColorClass: "bg-blue-600 hover:bg-blue-700",
-        link: "https://www.canoas.rs.gov.br/emissao-de-certificados/",
+        link: "https://drive.google.com/file/d/1IkTreYKmW_zh8_O2XLZOQ9Y9dJFoh4Sn/view?usp=sharing",
         support: ""
     },
     {
